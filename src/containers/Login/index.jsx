@@ -48,18 +48,20 @@ export function Login() {
                 <Title>
                     Olá, seja bem vindo ao <span>Dev Burguer!</span>
                     <br />
+                </Title>
+                <Title>
                     Acesse com seu<span> Login e senha.</span>
                 </Title>
                 <Form onSubmit={handleSubmit(onSubmit)}>
                     <InputContainer>
                         <label>Email</label>
-                        <input type="email" {...register("email")} />
+                        <input type="email" placeholder='E-mail' {...register("email")} />
                         <p>{errors?.email?.message}</p> 
                     </InputContainer>
 
                     <InputContainer>
                         <label>Senha</label>
-                        <input type="password" {...register("password")} />
+                        <input type="password" placeholder='Senha' {...register("password")} />
                         <p>{errors?.password?.message}</p>
                     </InputContainer>
                     <Button type="submit">Entrar</Button>
