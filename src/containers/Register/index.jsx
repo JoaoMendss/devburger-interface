@@ -15,10 +15,11 @@ import {
     Title
 } from './styles';
 
-export function Login() {
+export function Register() {
 
     const schema = yup
         .object({
+            name: yup.string().required('O nome é obrigatório!'),
             email: yup
                 .string().email('Digite um e-mail válido!')
                 .required('O e-mail é obrigatório!'),
@@ -26,6 +27,9 @@ export function Login() {
                 .string()
                 .min(6, 'A senha deve ter pelo menos 6 caracteres')
                 .required('Digite uma senha!'),
+            confirmPassword: yup
+                .string()
+                .oneOf([yup.ref])
         })
         .required()
 

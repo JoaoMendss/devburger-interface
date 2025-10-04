@@ -11,3 +11,9 @@ Iniciando projeto no dia 03/10/2025
 - Formulário com React Hook Form.
 - Validando o formulário de login.
 - Finalizando a tela de login.
+
+✅ Dia 2:
+- Conectei a API com o Front-end
+- Resolvi erros de conexão com o CORS.
+- Personalização das notificações com React Toastfy.
+- Criando Usuário. 
