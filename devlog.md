@@ -19,3 +19,11 @@ Iniciando projeto no dia 03/10/2025
 - Criando Usuário. 
 - Criando a tela de Register e consertando erros.
 - Cuidando da navegação das páginas de cadastro, login e home.
+- Atualizei o banco de dados.
+- Atualizei a logo na tela de login e cadastro.
+
+✅ Dia 3:
+- Começando a criar a tela Home.
+- Criando os carrosséis.
+- Revisei os dados e guardei informações no localStorage.
+-
