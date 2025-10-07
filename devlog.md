@@ -32,4 +32,7 @@ Iniciando projeto no dia 03/10/2025
 - Montei o segundo carrosel.
 - Montei o CSS do carrosel.
 - Filtrando Itens.
-- Criando Menu (começando só).
+- Criando Menu.
+- Comecei a montar a tela de categorias.
+- Finalizei a tela de categorias (esse deu trabalho demais).
+- Fiz um botão de voltar para a tela home.
