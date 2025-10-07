@@ -26,4 +26,10 @@ Iniciando projeto no dia 03/10/2025
 - Começando a criar a tela Home.
 - Criando os carrosséis.
 - Revisei os dados e guardei informações no localStorage.
--
+- Montei o carrosel
+
+✅ Dia 4:
+- Montei o segundo carrosel.
+- Montei o CSS do carrosel.
+- Filtrando Itens.
+- Criando Menu (começando só).
