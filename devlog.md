@@ -42,3 +42,10 @@ Iniciando projeto no dia 03/10/2025
 - Criando o primeiro contexto. (to entendendo nada mas ta funcionando)
 - Utilizei o contexto.
 - Criei o Header do site.
+
+✅ Dia 5:
+- Finalizei o Header.
+- Criei o Footer e o Cart.
+- Estruturei os arquivos do carrinho para começar a lógica.
+- Fiz toda a lógica do carrinho.
+- Organizei todas as importações para economizar linhas no código.
