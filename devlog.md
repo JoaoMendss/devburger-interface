@@ -49,3 +49,4 @@ Iniciando projeto no dia 03/10/2025
 - Estruturei os arquivos do carrinho para começar a lógica.
 - Fiz toda a lógica do carrinho.
 - Organizei todas as importações para economizar linhas no código.
+- Finalizei a parte visual do carrinho.
