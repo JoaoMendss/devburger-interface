@@ -40,3 +40,5 @@ Iniciando projeto no dia 03/10/2025
 ✅ Dia 4 (A noite):
 
 - Criando o primeiro contexto. (to entendendo nada mas ta funcionando)
+- Utilizei o contexto.
+- Criei o Header do site.
