@@ -50,3 +50,8 @@ Iniciando projeto no dia 03/10/2025
 - Fiz toda a lógica do carrinho.
 - Organizei todas as importações para economizar linhas no código.
 - Finalizei a parte visual do carrinho.
+- Criei o Resumo de Pedido.
+- Fiz os pedidos funcionarem.
+- Instalei e configurei o STRIPE no Back-end.
+- Configurei o STRIPE no Front-end.
+- Montei a tela de pagamento.

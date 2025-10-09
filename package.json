@@ -12,6 +12,8 @@
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@phosphor-icons/react": "^2.1.10",
+    "@stripe/react-stripe-js": "^5.2.0",
+    "@stripe/stripe-js": "^8.0.0",
     "axios": "^1.12.2",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
