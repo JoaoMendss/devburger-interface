@@ -92,6 +92,6 @@ export const HomeButton = styled.button`
     margin: 20px;
 
     &:hover {
-        opacity: 0.8;
+        color: #6F357C;
     }
 `;

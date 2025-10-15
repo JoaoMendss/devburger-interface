@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const CartContainer = styled.div`
+    position: relative; /* botão absoluto será relativo a esta div */
+    width: 100%;
+`;
+
+
 export const ProductImage = styled.img`
     height: 80px;
     width: 80px;
@@ -43,4 +49,23 @@ export const TrashImage = styled.img`
     height: 20px;
     width: 20px;
     cursor: pointer;
+`;
+
+export const HomeButton = styled.button`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #9758A6;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 20px;
+    text-decoration: underline;
+
+    &:hover {
+        color: #6F357C;
+    }
 `;

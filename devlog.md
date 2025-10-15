@@ -55,3 +55,7 @@ Iniciando projeto no dia 03/10/2025
 - Instalei e configurei o STRIPE no Back-end.
 - Configurei o STRIPE no Front-end.
 - Montei a tela de pagamento.
+
+✅ Dia 6:
+- Adicionei um Toast ao adicionar um produto no carrinho.
+

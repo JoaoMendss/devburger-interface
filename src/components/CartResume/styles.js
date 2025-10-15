@@ -63,6 +63,4 @@ export const Container = styled.div`
         font-weight: 700;
     }
     }
-
-    
 `;

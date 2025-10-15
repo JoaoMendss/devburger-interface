@@ -44,6 +44,7 @@ export function CartResume() {
 
     return (
         <div>
+
             <Container>
                 <div className="container-top">
                     <h2 className='title'>Resumo do Pedido</h2>
