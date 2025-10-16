@@ -59,3 +59,21 @@ Iniciando projeto no dia 03/10/2025
 ✅ Dia 6:
 - Adicionei um Toast ao adicionar um produto no carrinho.
 
+
+✅ Dia 7:
+- ...
+
+✅ Dia 8:
+- ...
+
+✅ Dia 9:
+- ...
+
+✅ Dia 10:
+- ...
+
+✅ Dia 11:
+- ...
+
+✅ Dia 12:
+- Finalizei os meios de pagamentos.
