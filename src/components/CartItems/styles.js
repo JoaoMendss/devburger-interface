@@ -25,7 +25,7 @@ export const ButtonGroup = styled.div`
         width: 30px;
         color: #FFF;
         border-radius: 4px;
-        background-color: #9758A6;
+        background-color: ${props => props.theme.purple};
         transition: all 0.4s;
         border: none;
 
@@ -57,7 +57,7 @@ export const HomeButton = styled.button`
     gap: 8px;
     background: none;
     border: none;
-    color: #9758A6;
+    color: ${props => props.theme.purple};
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;

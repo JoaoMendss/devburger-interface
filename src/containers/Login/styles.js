@@ -59,7 +59,7 @@ export const Title = styled.h2`
     color: #FFF;
 
     span {
-        color: #9758A6;
+        color: ${props => props.theme.purple};
         font-family: "Road Rage", sans-serif;
         justify-content: center;
     }
