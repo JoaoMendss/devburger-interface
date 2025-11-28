@@ -77,3 +77,14 @@ Iniciando projeto no dia 03/10/2025
 
 ✅ Dia 12:
 - Finalizei os meios de pagamentos.
+
+✅ Dia 13:
+- Utilizei o Outlet.
+- Comecei a criar telas de Admin.
+
+✅ Dia 14:
+- Criando menu lateral.
+- Ajustando menu lateral.
+
+✅ Dia 15:
+- Criando a tela de pedidos.
