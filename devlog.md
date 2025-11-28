@@ -88,3 +88,4 @@ Iniciando projeto no dia 03/10/2025
 
 ✅ Dia 15:
 - Criando a tela de pedidos.
+- Adaptando a tabela da tela de pedidos.
