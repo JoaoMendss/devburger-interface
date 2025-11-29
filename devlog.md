@@ -59,33 +59,23 @@ Iniciando projeto no dia 03/10/2025
 ✅ Dia 6:
 - Adicionei um Toast ao adicionar um produto no carrinho.
 
-
 ✅ Dia 7:
-- ...
-
-✅ Dia 8:
-- ...
-
-✅ Dia 9:
-- ...
-
-✅ Dia 10:
-- ...
-
-✅ Dia 11:
-- ...
-
-✅ Dia 12:
 - Finalizei os meios de pagamentos.
 
-✅ Dia 13:
+✅ Dia 8:
 - Utilizei o Outlet.
 - Comecei a criar telas de Admin.
 
-✅ Dia 14:
+✅ Dia 9:
 - Criando menu lateral.
 - Ajustando menu lateral.
 
-✅ Dia 15:
+✅ Dia 10:
 - Criando a tela de pedidos.
 - Adaptando a tabela da tela de pedidos.
+
+✅ Dia 11:
+- Adicionando funcionalidades a tabela.
+- Criando menu superior.
+- Conclui o menu superior.
+- Corrigindo bugs da tabela.
