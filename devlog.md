@@ -79,3 +79,7 @@ Iniciando projeto no dia 03/10/2025
 - Criando menu superior.
 - Conclui o menu superior.
 - Corrigindo bugs da tabela.
+
+✅ Dia 12:
+- Criando a tela de adicionar produtos.
+- Criando a lógica da tela de adicionar produtos.
