@@ -83,3 +83,6 @@ Iniciando projeto no dia 03/10/2025
 ✅ Dia 12:
 - Criando a tela de adicionar produtos.
 - Criando a lógica da tela de adicionar produtos.
+
+✅ Dia 13:
+- Finalizei as validações.
