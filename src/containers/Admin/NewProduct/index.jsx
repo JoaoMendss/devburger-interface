@@ -5,7 +5,8 @@ import { Image } from "@phosphor-icons/react/dist/ssr";
 
 import { api } from "../../../services/api";
 
-import { Container, Form, InputGroup, Label, Input, LabelUpload, Select, SubmitButton, ErrorMessage } from "./styles";
+import { useNavigate } from "react-router-dom";
+import { Container, Form, InputGroup, Label, Input, LabelUpload, Select, SubmitButton, ErrorMessage, ContainerCheckbox } from "./styles";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
@@ -14,6 +15,7 @@ const schema = yup
         name: yup.string().required('Digite o nome do produto'),
         price: yup.number().typeError('Digite o preço do produto').positive('Digite um valor positivo').required('Digite o preço do produto'),
         category: yup.object().required('Escolha uma categoria'),
+        offer: yup.bool(),
         file: yup.mixed().test('required', 'Escolha um arquivo para continuar', (value) => {
             return value && value.length > 0;
         }).test('fileSize', 'Carregue arquivos até 10MB', (value) => {
@@ -26,6 +28,8 @@ const schema = yup
 export function NewProduct() {
     const [fileName, setFileName] = useState(null);
     const [categories, setCategories] = useState([]);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function loadCategories() {
@@ -49,15 +53,20 @@ export function NewProduct() {
         const productFormData = new FormData();
 
         productFormData.append("name", data.name);
-        productFormData.append("price", data.price);
+        productFormData.append("price", data.price * 100);
         productFormData.append("category_id", data.category.id);
         productFormData.append("file", data.file[0]);
+        productFormData.append("offer", data.offer ? '1' : '0');
 
-        await toast.promise( api.post("/products", productFormData), {
+        await toast.promise(api.post("/products", productFormData), {
             pending: "Adicionando produto...",
             success: "Produto adicionado com sucesso!",
             error: "Erro ao adicionar o produto, tente novamente!",
         });
+
+        setTimeout(() => {
+            navigate('/admin/produtos')
+        }, 2000);
     }
     return (
         <Container>
@@ -70,7 +79,7 @@ export function NewProduct() {
 
                 <InputGroup>
                     <Label>Preço</Label>
-                    <Input type="number" {...register("price")} />
+                    <Input type="number" step="any" {...register("price")} />
                     <ErrorMessage>{errors?.price?.message}</ErrorMessage>
                 </InputGroup>
 
@@ -98,9 +107,9 @@ export function NewProduct() {
                     <Controller
                         name="category"
                         control={control}
-                        render={({field}) => (
+                        render={({ field }) => (
                             <Select
-                            {...field}
+                                {...field}
                                 options={categories}
                                 getOptionLabel={(category) => category.name}
                                 getOptionValue={(category) => category.id}
@@ -111,6 +120,15 @@ export function NewProduct() {
                     />
 
                     <ErrorMessage>{errors?.category?.message}</ErrorMessage>
+                </InputGroup>
+
+                <InputGroup>
+                    <ContainerCheckbox>
+                        <input type="checkbox"
+                            {...register("offer")}
+                        />
+                        <Label>Produto em Oferta?</Label>
+                    </ContainerCheckbox>
                 </InputGroup>
 
                 <SubmitButton>Adicionar Produto</SubmitButton>
