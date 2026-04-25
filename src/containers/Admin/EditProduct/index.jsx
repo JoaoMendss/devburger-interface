@@ -1,14 +1,15 @@
-import * as yup from "yup"
-import { Controller, useForm } from "react-hook-form"
-import { yupResolver } from "@hookform/resolvers/yup"
-import { useLocation, useNavigate } from "react-router-dom";
+import { Controller, useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import { Image } from "@phosphor-icons/react/dist/ssr";
 
 import { api } from "../../../services/api";
 
+import { useNavigate } from "react-router-dom";
 import { Container, Form, InputGroup, Label, Input, LabelUpload, Select, SubmitButton, ErrorMessage, ContainerCheckbox } from "./styles";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { useLocation } from "react-router-dom";
 
 const schema = yup
     .object({
@@ -24,9 +25,7 @@ export function EditProduct() {
 
     const navigate = useNavigate();
 
-    const { 
-        state: { product },
-    } = useLocation();
+    const product = useLocation().state?.product;
 
     useEffect(() => {
         async function loadCategories() {
@@ -53,8 +52,7 @@ export function EditProduct() {
         productFormData.append("price", data.price * 100);
         productFormData.append("category_id", data.category.id);
         productFormData.append("file", data.file[0]);
-        productFormData.append("offer", data.offer);
-        
+        productFormData.append("offer", data.offer ? '1' : '0');
 
         await toast.promise(api.put(`/products/${product.id}`, productFormData), {
             pending: "Editando produto...",
@@ -62,22 +60,22 @@ export function EditProduct() {
             error: "Erro ao editar o produto, tente novamente!",
         });
 
-        setTimeout(()=> {
-                navigate('/admin/produtos')
-            }, 2000);
-    };
+        setTimeout(() => {
+            navigate('/admin/produtos')
+        }, 2000);
+    }
     return (
         <Container>
             <Form form onSubmit={handleSubmit(onSubmit)}>
                 <InputGroup>
                     <Label>Nome</Label>
-                    <Input type="text" {...register("name")} defaultValue={product.name} />
+                    <Input type="text" {...register("name")} defaultValue={product?.name}/>
                     <ErrorMessage>{errors?.name?.message}</ErrorMessage>
                 </InputGroup>
 
                 <InputGroup>
                     <Label>Preço</Label>
-                    <Input type="number" step="0.01" {...register("price")} defaultValue={product.price / 100} />
+                    <Input type="number" step="any" {...register("price")} defaultValue={product?.price / 100}/>
                     <ErrorMessage>{errors?.price?.message}</ErrorMessage>
                 </InputGroup>
 
@@ -104,8 +102,8 @@ export function EditProduct() {
                     <Label>Categoria</Label>
                     <Controller
                         name="category"
-                        defaultValue={product.category}
                         control={control}
+                        defaultValue={product?.category}
                         render={({ field }) => (
                             <Select
                                 {...field}
@@ -114,7 +112,7 @@ export function EditProduct() {
                                 getOptionValue={(category) => category.id}
                                 placeholder="Categorias"
                                 menuPortalTarget={document.body}
-                                defaultValue={product.category}
+                                defaultValue={product?.category}
                             />
                         )}
                     />
@@ -123,12 +121,13 @@ export function EditProduct() {
                 </InputGroup>
 
                 <InputGroup>
-                        <ContainerCheckbox>
-                            <input type="checkbox" defaultChecked={product.offer}
+                    <ContainerCheckbox>
+                        <input type="checkbox"
                             {...register("offer")}
-                            />
-                            <Label>Produto em Oferta?</Label>
-                        </ContainerCheckbox>
+                            defaultChecked={product?.offer}
+                        />
+                        <Label>Produto em Oferta?</Label>
+                    </ContainerCheckbox>
                 </InputGroup>
 
                 <SubmitButton>Editar Produto</SubmitButton>
